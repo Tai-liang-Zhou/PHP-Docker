@@ -1,4 +1,5 @@
-FROM php:7.4-cli
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
-CMD [ "php", "./index.php" ]
+FROM php:8.0-apache
+COPY . /var/www/html/
+WORKDIR /var/www/html/
+# CMD [ "php", "./index.php" ]
+EXPOSE 80
